@@ -10,11 +10,12 @@ function App() {
   return (
     <Router>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Painel />} />
-          <Route path="/alunos" element={<Alunos />} />
-          <Route path="/matricular-aluno" element={<MatricularAluno />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Painel />} />
+        <Route path="/alunos" element={<Alunos />} />
+        <Route path="/matricular-aluno" element={<MatricularAluno />} />
+        <Route path="/matricular-aluno/:id" element={<MatricularAluno />} />
+      </Routes>
       </Layout>
     </Router>
   );
