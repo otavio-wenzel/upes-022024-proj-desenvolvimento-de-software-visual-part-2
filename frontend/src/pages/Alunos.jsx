@@ -36,9 +36,14 @@ function Alunos() {
       <h2>Lista de Alunos</h2>
       <button
         className="menu-button"
-        onClick={() => navigate("/matricular-aluno")}
-      >
+        onClick={() => navigate("/matricular-aluno")}>
         Matricular Aluno
+      </button>
+      <button
+        className="menu-button"
+        onClick={() => navigate("/painel")} // Botão para voltar ao painel
+        >
+        Voltar
       </button>
       <table className="aluno-table">
         <thead>
