@@ -48,8 +48,27 @@ function MatricularAluno() {
   };
 
   return (
-    <div>
-      <h2>{id ? "Editar Aluno" : "Matricular Aluno"}</h2>
+    <>
+    <div className="user-info">
+          <p>
+            Margarida de Oliveira Maduro
+            <br />
+            Secretária
+            <br />
+            NRU 6472114
+            <br />
+            Escola Quilombola da Chapada
+          </p>
+          <a href="#" className="logout"
+             onClick={(e) => {
+            e.preventDefault(); // Previne o comportamento padrão do link
+            navigate("/"); // Redireciona para a página de login
+          }}>
+            Sair
+          </a>
+    </div>
+    <div className="case">
+      <h2>{id ? "EDITAR ALUNO" : "MATRICULAR ALUNO"}</h2>
       <form className="matricula-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="nome">Nome:</label>
@@ -110,6 +129,7 @@ function MatricularAluno() {
         </div>
       </form>
     </div>
+    </>
   );
 }
 

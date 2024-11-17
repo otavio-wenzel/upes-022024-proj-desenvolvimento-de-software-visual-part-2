@@ -1,13 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/styles.css";
+import "../App.css";
 
 function Painel() {
   const navigate = useNavigate();
 
   return (
-    <div className="painel-page">
-      <main className="painel-container">
+      <>
         <div className="user-info">
           <p>
             Margarida de Oliveira Maduro
@@ -18,23 +17,27 @@ function Painel() {
             <br />
             Escola Quilombola da Chapada
           </p>
-          <a href="#" className="logout">
+          <a href="#" className="logout"
+             onClick={(e) => {
+             e.preventDefault(); // Previne o comportamento padrão do link
+             navigate("/"); // Redireciona para a página de login
+          }}>
             Sair
           </a>
         </div>
         <h2>PAINEL INICIAL</h2>
-        <div className="button-grid">
+        <div className="button-grid-painel">
           <button
-            className="menu-button"
+            className="painel-button"
             onClick={() => navigate("/alunos")}
           >
             Alunos
           </button>
-          <button className="menu-button">Professores</button>
-          <button className="menu-button">Turmas</button>
+          <button className="painel-button">Professores</button>
+          <button className="painel-button">Turmas</button>
+          <button className="painel-button">Disciplinas</button>
         </div>
-      </main>
-    </div>
+      </>
   );
 }
 
